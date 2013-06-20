@@ -1,15 +1,13 @@
 //
-//  NFCache.h
+//  NFCacheMemory.h
 //  NFCache
 //
-//  Created by Andrew Williams on 19/06/13.
+//  Created by Andrew Williams on 20/06/13.
 //  Copyright (c) 2013 Andrew Williams. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "NFCacheSD.h"
-
-@interface NFCache : NSObject
+@interface NFCacheMemory : NSObject
 
 @end

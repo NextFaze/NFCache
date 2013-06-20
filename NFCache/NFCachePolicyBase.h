@@ -1,5 +1,5 @@
 //
-//  NFCache.h
+//  NFCachePolicyBase.h
 //  NFCache
 //
 //  Created by Andrew Williams on 19/06/13.
@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NFCacheSD.h"
-
-@interface NFCache : NSObject
+@interface NFCachePolicyBase : NSObject
 
 @end

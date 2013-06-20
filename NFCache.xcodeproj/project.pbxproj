@@ -16,6 +16,10 @@
 		B56E046C177157A00007DE3C /* libNFCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56E0453177157A00007DE3C /* libNFCache.a */; };
 		B56E0472177157A00007DE3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B56E0470177157A00007DE3C /* InfoPlist.strings */; };
 		B56E0475177157A00007DE3C /* NFCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B56E0474177157A00007DE3C /* NFCacheTests.m */; };
+		B56E04A1177157E70007DE3C /* NFCacheSD.m in Sources */ = {isa = PBXBuildFile; fileRef = B56E04A0177157E70007DE3C /* NFCacheSD.m */; };
+		B56E04A4177158A50007DE3C /* NFCacheBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B56E04A3177158A50007DE3C /* NFCacheBase.m */; };
+		B56E04A717715AF10007DE3C /* NFCachePolicyBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B56E04A617715AF10007DE3C /* NFCachePolicyBase.m */; };
+		B5A040A51772D58100FD3B0A /* NFCacheMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A040A41772D58100FD3B0A /* NFCacheMemory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,14 @@
 		B56E0471177157A00007DE3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B56E0473177157A00007DE3C /* NFCacheTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFCacheTests.h; sourceTree = "<group>"; };
 		B56E0474177157A00007DE3C /* NFCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCacheTests.m; sourceTree = "<group>"; };
+		B56E049F177157E70007DE3C /* NFCacheSD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCacheSD.h; sourceTree = "<group>"; };
+		B56E04A0177157E70007DE3C /* NFCacheSD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCacheSD.m; sourceTree = "<group>"; };
+		B56E04A2177158A50007DE3C /* NFCacheBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCacheBase.h; sourceTree = "<group>"; };
+		B56E04A3177158A50007DE3C /* NFCacheBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCacheBase.m; sourceTree = "<group>"; };
+		B56E04A517715AF10007DE3C /* NFCachePolicyBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCachePolicyBase.h; sourceTree = "<group>"; };
+		B56E04A617715AF10007DE3C /* NFCachePolicyBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCachePolicyBase.m; sourceTree = "<group>"; };
+		B5A040A31772D58100FD3B0A /* NFCacheMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCacheMemory.h; sourceTree = "<group>"; };
+		B5A040A41772D58100FD3B0A /* NFCacheMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCacheMemory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,8 @@
 		B56E0458177157A00007DE3C /* NFCache */ = {
 			isa = PBXGroup;
 			children = (
+				B56E04A917715B090007DE3C /* Policy */,
+				B56E04A817715AFF0007DE3C /* Caches */,
 				B56E045B177157A00007DE3C /* NFCache.h */,
 				B56E045D177157A00007DE3C /* NFCache.m */,
 				B56E0459177157A00007DE3C /* Supporting Files */,
@@ -143,6 +157,28 @@
 				B56E0470177157A00007DE3C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B56E04A817715AFF0007DE3C /* Caches */ = {
+			isa = PBXGroup;
+			children = (
+				B56E04A2177158A50007DE3C /* NFCacheBase.h */,
+				B56E04A3177158A50007DE3C /* NFCacheBase.m */,
+				B56E049F177157E70007DE3C /* NFCacheSD.h */,
+				B56E04A0177157E70007DE3C /* NFCacheSD.m */,
+				B5A040A31772D58100FD3B0A /* NFCacheMemory.h */,
+				B5A040A41772D58100FD3B0A /* NFCacheMemory.m */,
+			);
+			name = Caches;
+			sourceTree = "<group>";
+		};
+		B56E04A917715B090007DE3C /* Policy */ = {
+			isa = PBXGroup;
+			children = (
+				B56E04A517715AF10007DE3C /* NFCachePolicyBase.h */,
+				B56E04A617715AF10007DE3C /* NFCachePolicyBase.m */,
+			);
+			name = Policy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +280,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B56E045E177157A00007DE3C /* NFCache.m in Sources */,
+				B56E04A1177157E70007DE3C /* NFCacheSD.m in Sources */,
+				B56E04A4177158A50007DE3C /* NFCacheBase.m in Sources */,
+				B56E04A717715AF10007DE3C /* NFCachePolicyBase.m in Sources */,
+				B5A040A51772D58100FD3B0A /* NFCacheMemory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +443,7 @@
 				B56E047A177157A00007DE3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B56E047B177157A00007DE3C /* Build configuration list for PBXNativeTarget "NFCacheTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +452,7 @@
 				B56E047D177157A00007DE3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
