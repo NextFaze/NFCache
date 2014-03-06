@@ -118,7 +118,7 @@
     NSData *valueData = [NSKeyedArchiver archivedDataWithRootObject:value];
     unsigned char r[CC_MD5_DIGEST_LENGTH + 1];
     NSMutableString *result = [NSMutableString stringWithCapacity:2 * CC_MD5_DIGEST_LENGTH];
-    CC_MD5(valueData.bytes, valueData.length, r);
+    CC_MD5(valueData.bytes, (CC_LONG) valueData.length, r);
 
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
         [result appendFormat:@"%02x", r[i]];
