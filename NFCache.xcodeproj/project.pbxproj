@@ -218,7 +218,7 @@
 			name = NFCacheTests;
 			productName = NFCacheTests;
 			productReference = B56E0464177157A00007DE3C /* NFCacheTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -226,6 +226,7 @@
 		B56E044B1771579F0007DE3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Andrew Williams";
 			};
