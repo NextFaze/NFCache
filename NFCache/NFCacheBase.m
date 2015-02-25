@@ -20,14 +20,23 @@
 }
 
 - (void)store:(id)key value:(id)value {
-    
+    NSLog(@"Abstract method - this needs to be implemented by a subclass.");
+    abort();
 }
 
 - (id)read:(id)key {
-    return nil;
+    NSLog(@"Abstract method - this needs to be implemented by a subclass.");
+    abort();
 }
 
 - (void)remove:(id)key {
+    NSLog(@"Abstract method - this needs to be implemented by a subclass.");
+    abort();
+}
+
+- (void)clean {
+    NSLog(@"Abstract method - this needs to be implemented by a subclass.");
+    abort();
 }
 
 @end

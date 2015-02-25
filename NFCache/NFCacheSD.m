@@ -29,8 +29,6 @@
 - (void)store:(id)key value:(id)value {
     if(key == nil) return;
     
-    [super store:key value:value];
-    
     NSError *error = nil;
     if(!self.createdPath) {
         [[NSFileManager defaultManager] createDirectoryAtPath:self.path withIntermediateDirectories:YES attributes:nil error:&error];
@@ -83,9 +81,7 @@
 
 - (void)remove:(id)key {
     if(key == nil) return;
-    
-    [super remove:key];
-    
+        
     NSError *error = nil;
     NSString *path = [self cachePath:key];
     NFCacheSize size = [self fileSize:path];
