@@ -13,8 +13,9 @@
 
 - (id)init {
     self = [super init];
-    if(self) {
-        self.maximumSize = NFCacheBaseDefaultMaxSize;
+    if (self) {
+        self.maxCacheSize = NFCacheBaseDefaultMaxSize;
+        self.maxCacheAge = NFCacheBaseDefaultMaxAge;
     }
     return self;
 }

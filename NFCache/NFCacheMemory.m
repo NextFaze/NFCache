@@ -40,4 +40,10 @@
     }
 }
 
+- (void)clean {
+    @synchronized(self) {
+        [self.dict removeAllObjects];
+    }
+}
+
 @end
